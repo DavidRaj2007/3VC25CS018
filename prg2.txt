@@ -1,0 +1,62 @@
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (main)
+$ vio one.c
+bash: vio: command not found
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (main)
+$ vi one.c
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (main)
+$ git add .
+warning: in the working copy of 'one.c', LF will be replaced by CRLF the next time Git touches it
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (main)
+$ git commit -m " David one.c "
+[main ec9818a]  David one.c
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (main)
+$ git branch b1
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (main)
+$ git branch b2
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (main)
+$ git branch
+  b1
+  b2
+* main
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (main)
+$ git checkout b1
+Switched to branch 'b1'
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (b1)
+$ echo "In branch b1 Hello World">> lab3.c
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (b1)
+$ git add lab3.c
+warning: in the working copy of 'lab3.c', LF will be replaced by CRLF the next time Git touches it
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (b1)
+$ git commit -m "lab3 for b1"
+[b1 2e06fe3] lab3 for b1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 lab3.c
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (b1)
+$ git chechout master
+git: 'chechout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (b1)
+$ git merge b1
+Already up to date.
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (b1)
+$ git branch -d b1
+error: cannot delete branch 'b1' used by worktree at 'D:/David/3VC25CS018'
+
+DELL@DESKTOP-L9T1THN MINGW64 /d/David/3VC25CS018 (b1)
+$
